@@ -14,19 +14,30 @@
 #
 ###############################################################################
 
+################################################################################
+#
+# Assignment
+#
+################################################################################
+
+################################################################################
 #
 # function: makeCacheMatrix
 #
-# creates a special "matrix", 
-#	which is really a list containing a function to
+# takes:
+#	- matrix
+#
+# returns:
+#	-  a special "matrix"; a list containing functions to
 # 		- set a matrix
 # 		- get a matrix
 # 		- set the inverse of a matrix
-# 		- get the inverse of a mean
+# 		- get the inverse of a matrix
 #
+################################################################################
 makeCacheMatrix <- function(x = matrix()) {
 	
-	# initialize the saved mean to null
+	# initialize the saved inverse to null
 	saved_inverse <- NULL
 
 	# sets x to passed in y
@@ -48,11 +59,12 @@ makeCacheMatrix <- function(x = matrix()) {
 	list(
 		set = set,
 		get = get,
-		setinverse = setmean,
-		getinverse = getmean
+		setinverse = setinverse,
+		getinverse = getinverse
 	)
 }
 
+################################################################################
 #
 # function: cacheSolve
 #
@@ -63,14 +75,14 @@ makeCacheMatrix <- function(x = matrix()) {
 # 	- inverse of that matrix
 #
 # does:
-#	- checks to see if the mean has already been calculated
-#		- (checks if the matrix is the same?)
-#			- if so, returns that
+#	- checks to see if the inverse has already been calculated
+#		- if so, returns that
 #
 #	- otherwise: 
 #		- calculates the inverse
 #		- sets the value of the inverse in the cache via the setinverse function
 # 
+################################################################################
 cacheSolve <- function(x, ...) {
 
 	# check for inverse
@@ -82,7 +94,7 @@ cacheSolve <- function(x, ...) {
 		return(inverse)
 	}
 
-	# collect the data, calculate the mean of it
+	# collect the data, calculate the inverse of it
 	data <- x$get()
 	inverse <- solve(data, ...)
 
@@ -91,12 +103,13 @@ cacheSolve <- function(x, ...) {
 	inverse
 }
 
-########################################
+################################################################################
 #
 # Class Examples
 #
-########################################
+################################################################################
 
+################################################################################
 #
 # function: makeVector
 #
@@ -109,6 +122,7 @@ cacheSolve <- function(x, ...) {
 # 		- set the value of the mean
 # 		- get the value of the mean
 # 
+################################################################################
 makeVector <- function(x = numeric()) {
 	
 	# initialize the saved mean to null
@@ -138,6 +152,7 @@ makeVector <- function(x = numeric()) {
 	)
 }
 
+################################################################################
 #
 # function: cachemean
 #
@@ -154,7 +169,8 @@ makeVector <- function(x = numeric()) {
 #		- if so, returns that
 #	- calculates the mean of the data
 #	- sets the value of the mean in the cache via the setmean function
-# 
+#
+################################################################################
 cachemean <- function(x, ...) {
 
 	# check for mean (has _ to avoid confusion with the function "mean")
