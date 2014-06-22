@@ -17,7 +17,7 @@ Making a special matrix:
 
 Calculating the inverse, checking if it were cached correctly:
 <!-- -->
-    > m <- x<-matrix(rnorm(20), 2, 2)
+    > m <- matrix(rnorm(20), 2, 2)
     > a <- makeCacheMatrix(m)
     > cacheSolve(a)
                   [,1]       [,2]

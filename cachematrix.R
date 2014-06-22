@@ -10,7 +10,7 @@
 # Useful note:
 #   <<- operator
 #       assigns a value to an object in an environment
-#       DIFFERENT from the current environment. 
+#       DIFFERENT from the current environment.
 #
 ###############################################################################
 
@@ -36,6 +36,11 @@
 #
 ################################################################################
 makeCacheMatrix <- function(x = matrix()) {
+
+    # if the matrix isn't square, yelp
+    if (nrow(x) != ncol(x)){
+        warning("Matrix is not square")
+    }
     
     # initialize the saved inverse to null
     saved_inverse <- NULL
