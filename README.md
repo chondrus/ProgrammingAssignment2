@@ -9,14 +9,14 @@ The following code shows you how to use the makeVector and cachemean example fun
 
 <!-- -->
     
-    # this will show the defined functions
+this will show the defined functions
     > makeVector()
 
-    # making a special vector
+making a special vector
     > v <- c(1, 2, 3, 12)
     > a <- makeVector(v)
 
-    # calculating the mean, checking if it were cached correctly
+calculating the mean, checking if it were cached correctly
     > cachemean(a)
         [1] 4.5
     > cachemean(a)
