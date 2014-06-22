@@ -12,7 +12,7 @@ Showing the defined functions:
 
 Making a special matrix:
 <!-- -->
-    > m <- x<-matrix(rnorm(20), 2, 2)
+    > m <- matrix(rnorm(20), 2, 2)
     > a <- makeCacheMatrix(m)
 
 Calculating the inverse, checking if it were cached correctly:
