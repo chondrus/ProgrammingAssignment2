@@ -38,7 +38,7 @@
 makeCacheMatrix <- function(x = matrix()) {
 
     # if the matrix isn't square, yelp
-    if (nrow(x) != ncol(x)){
+    if (nrow(x) != ncol(x)) {
         warning("Matrix is not square")
     }
     
