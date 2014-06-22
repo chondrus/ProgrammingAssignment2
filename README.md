@@ -1,11 +1,10 @@
 ### Introduction
 
-This is the second programming assignment for
-    - R Programming
+This is the second programming assignment for the Coursera R Programming Class offered by Roger D. Peng, PhD, Jeff Leek, PhD, Brian Caffo, PhD, etc.
 
-### Using the Example: Caching the Mean of a Vector
+### Using the Class Example: Caching the Mean of a Vector
 
-The following code shows you how to use the makeVector and cachemean example functions from class.
+The following code shows you how to use the makeVector and cachemean functions from the class example. 
     
 Showing the defined functions:
 
@@ -28,18 +27,18 @@ Calculating the mean, checking if it were cached correctly:
 
 ### Using Assignment: Caching the Inverse of a Matrix
 
-The following code shows you how to use the makeCacheMatrix and cacheSolve assignment.
+The following code shows you how to use the makeCacheMatrix and cacheSolve functions from the assignment.
 
 Showing the defined functions:
 <!-- -->
     > makeCacheMatrix()
 
-Making a special matrix
+Making a special matrix:
 <!-- -->
     > m <- x<-matrix(rnorm(20), 2, 2)
     > a <- makeCacheMatrix(m)
 
-Calculating the inverse, checking if it were cached correctly
+Calculating the inverse, checking if it were cached correctly:
 <!-- -->
     > m <- x<-matrix(rnorm(20), 2, 2)
     > a <- makeCacheMatrix(m)
